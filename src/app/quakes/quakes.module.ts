@@ -7,13 +7,15 @@ import { QuakeListComponent } from './components/quake-list/quake-list.component
 import { QuakeEffects } from './store/effects';
 import { QuakeDetailComponent } from './components/quake-detail/quake-detail.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { MapComponent } from './components/map/map.component';
 
 
 
 @NgModule({
   declarations: [
     QuakeListComponent,
-    QuakeDetailComponent
+    QuakeDetailComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,

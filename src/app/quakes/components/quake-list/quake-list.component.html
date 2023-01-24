@@ -3,6 +3,9 @@
         <span class="visually-hidden">Loading...</span>
     </div>
 </div>
+<div *ngIf="error$ | async" class="alert alert-danger mt-2" role="alert">
+    Oops, something went wrong. Please try again later.
+</div>
 <table *ngIf="!(isLoading$ | async)" class="table table-striped table-hover">
     <thead>
         <tr>

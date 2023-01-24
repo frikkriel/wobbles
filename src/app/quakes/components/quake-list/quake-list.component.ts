@@ -9,7 +9,7 @@ import { errorSelector, isLoadingSelector, quakesSelector } from '../../store/se
 @Component({
   selector: 'app-quake-list',
   templateUrl: './quake-list.component.html',
-  styleUrls: ['./quake-list.component.sass']
+  styleUrls: ['./quake-list.component.scss']
 })
 export class QuakeListComponent implements OnInit {
   isLoading$: Observable<boolean>;
