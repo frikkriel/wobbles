@@ -15,16 +15,3 @@ export const getQuakesFailure = createAction(
     props<{ error: string }>()
 );
 
-// get a single quake
-export const getQuake = createAction(
-    '[Quake Details Page] Get Quake'
-);
-
-export const getQuakeSuccess = createAction(
-    '[Quake Details Page] Get Quake Success',
-    props<{ quakes: Quake }>()
-);
-export const getQuakeFailure = createAction(
-    '[Quake Details Page] Get Quake Failure',
-    props<{ error: string }>()
-);
