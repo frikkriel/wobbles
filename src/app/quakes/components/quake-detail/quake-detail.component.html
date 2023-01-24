@@ -1,0 +1,26 @@
+<div *ngIf="quake$ |async as quake" class="d-flex justify-content-center pt-5">
+    <div class="card text-center w-50">
+        <div class="card-header">
+            {{quake.properties.place}}
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="card-title">Magnitude: {{quake.properties.mag}}</h5>
+                    <h5 class="card-title">{{quake.properties.time | date:'medium'}}</h5>
+                    <p>Tsunami generated: <b>{{quake.properties.tsunami ? 'Yes' : 'No'}}</b></p>
+                    <p>Click <a href="{{quake.properties.url}}" target="_blank">here</a> to view the offical website.</p>
+                    <a routerLink='/quakes-list' class="btn btn-primary mt-5">Back to list</a>
+                </div>
+                <div class="col-md-6">
+                    <div class="map-container w-100 h-100">
+                        <app-map [map]="map"></app-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            Identification: {{quake.id}}
+        </div>
+    </div>
+</div>
